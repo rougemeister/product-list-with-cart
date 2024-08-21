@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Redhat-Bold';
+    font-weight: 1000;
+    src: url('./assets/fonts/static/RedHatText-Bold.ttf');
+
+}
+@font-face {
+    font-family: 'Redhat-Semibold';
+    // font-weight: 800;
+    src: url('./assets/fonts/static/RedHatText-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: 'Redhat-Regular';
+    font-weight: 600;
+    src: url('./assets/fonts/static/RedHatText-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Redhat-Light';
+    font-weight: 400;
+    src: url('./assets/fonts/RedHatText-VariableFont_wght.ttf');
+}
+
+
+
+@font-face {
+    font-family: 'Redhat-Italic';
+    font-weight: 500;
+    src: url('./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf');
+}
+
+:root {
+    --red: #c73b0f;
+    --rose-900: #260f08;
+    --rose-500: #87635a;
+    --rose-400: #ad8a85;
+    --rose-300: #caafa7;
+    --rose-100: #f5eeec;
+    --rose-50: #fcf8f6;
+    --green: #1ea575;
+    --white: #ffffff;
+    --black: #000000;
+  }
+
+
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ 
+  }
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--rose-50);
+  font-family: 'Redhat-Regular';
+  color: var(--rose-900);
+}
