@@ -1,3 +1,11 @@
-<div>
-  <app-product/>
+
+<h1>Desserts</h1>
+<div class="main">
+
+  <div>
+ @for(item of products; track $index){
+  <app-product [product]="item"/>
+}</div>
+
+<app-cart/>
 </div>
