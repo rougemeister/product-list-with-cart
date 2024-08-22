@@ -1,0 +1,84 @@
+.product{
+    width: 327px;
+    position: relative;
+}
+
+img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+button {
+    cursor: pointer;
+}
+
+.btn {
+    width: 160px;
+    padding: 10px 15px;
+    border-radius: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 0.3rem;
+    align-items: center;
+    color: var(--rose-900);
+    background-color: var(--white);
+    border: 1px solid var(--rose-500);
+    position: absolute;
+    bottom: 5.6rem;
+    left: 5.5rem;
+    font-family: "Redhat-Semibold";
+    
+
+    
+}
+
+div.btn-secondary {
+    justify-content: space-between;
+    visibility: hidden;
+    background-color: var(--red);
+    color: white;
+ 
+}
+
+.btn-secondary svg {
+    border: 1px solid var(--white);
+    border-radius: 100px;
+    fill: var(--white);
+  
+        
+}
+
+.btn-secondary svg:hover {
+    fill: var(--red);
+    background-color: var(--white);
+}
+.cart-svg {
+    fill: var(--red);
+}
+
+.cart-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.item {
+    margin-top: 38px;
+    p {
+        margin-bottom: 4px;
+    }
+}
+
+.item-name {
+    color: var(--rose-500);
+
+}
+
+.item-description,
+.price {
+    font-family: 'Redhat-Semibold';
+}
+
+.price {
+    color: var(--red);
+}
