@@ -5,6 +5,8 @@ export interface Product {
       tablet: string;
       desktop: string;
     };
+    addedToCart: boolean;
+    quantity: number;
     name: string;
     category: string;
     price: number;
