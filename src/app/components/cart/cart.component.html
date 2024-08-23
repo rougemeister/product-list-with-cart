@@ -12,7 +12,7 @@
                     <p class="item-list-name">{{item.name}}</p>
                     <div class="pricing">
                         <span class="quantity">{{item.quantity}}x</span>
-                        <span class="price">&#64;${{item.price}}</span>
+                        <span class="price">&#64;${{item.price.toFixed(2)}}</span>
                         <span class="total">${{item.price * item.quantity}}</span>
                     </div>
                     

@@ -119,7 +119,9 @@
     font-size: 1rem;
     font-weight: 600;
 }
-
+.remove-item {
+    cursor: pointer;
+}
 @media screen and (min-width: 480px) {
     .cart {
         width:   384px;

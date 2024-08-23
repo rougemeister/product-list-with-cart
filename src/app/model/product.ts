@@ -1,10 +1,13 @@
+export interface Image {
+    thumbnail: string;
+    mobile: string;
+    tablet: string;
+    desktop: string;
+  
+}
+
 export interface Product {
-    image: {
-      thumbnail: string;
-      mobile: string;
-      tablet: string;
-      desktop: string;
-    };
+    image: Image;
     addedToCart: boolean;
     quantity: number;
     name: string;
