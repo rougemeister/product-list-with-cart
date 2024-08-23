@@ -39,7 +39,8 @@ div.btn-secondary {
     visibility: hidden;
     background-color: var(--red);
     color: white;
- 
+    border: none;
+    bottom: 5.675rem;
 }
 
 .btn-secondary svg {
@@ -82,4 +83,17 @@ div.btn-secondary {
 
 .price {
     color: var(--red);
+}
+
+
+@media screen and (min-width: 480px) {
+    .product{
+        width: 213.33px;
+        margin: 12px;
+    }
+
+    .btn {
+        bottom: 5.6rem;
+        left: 1.65rem;
+    }
 }
