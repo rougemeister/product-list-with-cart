@@ -1,6 +1,6 @@
 <div class="cart">
     <h2 class="cart-title">
-        Your Cart(0)
+        Your Cart({{ getTotalItems() }})
     </h2>
     
     @if (cartItems.length > 0) {

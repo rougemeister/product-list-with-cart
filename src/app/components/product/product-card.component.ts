@@ -13,6 +13,7 @@ import { CartService } from '../../services/cart.service';
 export class ProductComponent {
   isVisible = false;
   isDisplay = true;
+  isActive = false;
   @Input()
   product!: Product;
 
@@ -21,6 +22,7 @@ export class ProductComponent {
 
   addToCart(dessert: Product): void {
     this.cartService.addToCart(dessert);
+    this.isActive = true;
   }
 
   increaseQuantity(dessert: Product): void {
@@ -30,8 +32,11 @@ export class ProductComponent {
   decreaseQuantity(dessert: Product): void {
     if (dessert.quantity > 1) {
       dessert.quantity--;
+      
      } else { 
+      this.cartService.removeFromCart(dessert)
       this.toggleVisibility()
+      this.isActive = false;
   
      }
   }

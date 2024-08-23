@@ -1,5 +1,6 @@
 <div class="product">
     <img [src]="product.image.mobile" 
+    [ngClass]="{'active': isActive}"
      sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 100vw" 
      alt="{{ product.name }}">
     <button class="btn" (click)="toggleVisibility()" [ngStyle]="{'display': isDisplay ? 'flex' : 'none'}" (click)="addToCart(product)">
