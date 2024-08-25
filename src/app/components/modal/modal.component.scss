@@ -8,10 +8,10 @@
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: rgba(151, 151, 151, 0.377);
+    align-items: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
-    // display: none;
+    animation: fadeIn 0.3s ease-out;
 
   }
   
@@ -22,23 +22,32 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 40px;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform: translateY(100%); /* Start outside the viewport */
+    animation: slideUp 0.5s ease-out forwards; 
+  }
+  
+  @keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      background-color: rgba(0, 0, 0, 0);
+    }
+    to {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
   }
   
 
-.cart-title {
-    font-family: 'Redhat-Semibold';
-    color:var(--red);
-}
 
-.cart-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 195px;
-    text-align: center;
-}
 .confirm-img {
     margin-bottom: 24px;
 }
@@ -59,6 +68,9 @@
     background-color: var(--rose-50);
     border-radius: 8px;
     margin: 24px 0 32px 0;
+    max-height: 300px;
+    overflow-y: auto; 
+    overflow-x: hidden; 
 }
 
 .item-list ul li  {
@@ -83,6 +95,33 @@
         }
     }
 }
+
+/* WebKit-based browsers (Chrome, Safari, Edge) */
+.item-list ul::-webkit-scrollbar {
+    width: 15px; /* Width of the scrollbar */
+    border-radius: 10px;
+  }
+  
+  .item-list ul::-webkit-scrollbar-track {
+    background-color: #f1f1f1; 
+    border-radius: 10px;
+  }
+  
+  .item-list ul::-webkit-scrollbar-thumb {
+    background-color: var(--red); 
+    border-radius: 10px;
+  }
+  
+  .item-list ul::-webkit-scrollbar-thumb:hover {
+    background-color: var(--rose-500); /* Color of the scroll thumb on hover */
+  }
+  
+  /* For Firefox */
+  .item-list ul {
+    scrollbar-width: thin; /* Makes scrollbar thinner */
+    scrollbar-color: var(--red) var(--rose-50) /* Thumb color and track color */
+
+  }
 
 .item-list-name {
     margin-bottom: 8px;
@@ -149,9 +188,17 @@
     cursor: pointer;
 }
 @media screen and (min-width: 480px) {
-    .cart {
-        width:   384px;
-    }
+    .modal-container {
+        align-items: center;  
+      }
+
+
+      .modal{
+
+        border-radius: 10px;
+
+      }
+      
 }
 
 @media screen and (min-width: 768px) and (max-width: 1230px) {
