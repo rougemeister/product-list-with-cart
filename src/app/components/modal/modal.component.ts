@@ -31,7 +31,9 @@ export class ModalComponent {
 
 
   
-
+  getTotalPrice() {
+    return this.cartService.getTotalPrice();
+  }
  
 
   closeModal() {
