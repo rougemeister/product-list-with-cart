@@ -15,5 +15,8 @@ export class ModalService {
 
   close() {
     this.modalVisibility.next(false);
+    setTimeout(()=>{
+      window.location.reload()
+    },0)
   }
 }
