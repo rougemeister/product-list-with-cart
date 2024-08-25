@@ -1,6 +1,7 @@
 import { Component,inject } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { Product } from '../../model/product';
+import { ModalService } from '../../services/modal.service';
 
 @Component({
   selector: 'app-cart',
@@ -14,6 +15,7 @@ export class CartComponent {
   cartItems: Product[] = [];
 
   private cartService = inject(CartService);
+  private modalService = inject(ModalService)
 
   ngOnInit(): void {
     this.cartService.cartItems$.subscribe((data) => {
@@ -32,5 +34,9 @@ export class CartComponent {
 
   getTotalPrice() {
     return this.cartService.getTotalPrice();
+  }
+
+  openModal() {
+    this.modalService.open();
   }
 }
